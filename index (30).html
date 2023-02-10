@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<!--
+  Objeto - Carro
+  Método -  car.start()
+  Propriedade - car.name = Fiat
+
+All cars have the same properties, but the property values differ from car to car.
+
+All cars have the same methods, but the methods are performed at different times.
+-->
+<html>
+
+<head>
+  <meta charset="utf-8">
+  
+</head>
+
+<body>
+  <h2>JavaScript Variables</h2>
+<p id="demo"></p>
+<script>
+// Create and display a variable:
+let car = "Fiat";
+document.getElementById("demo").innerHTML = car;
+</script>
+
+  <!-- Objects are variables too. But objects can contain many values.
+This code assigns many values (Fiat, 500, white) to a variable named car:
+  The values are written as name:value pairs (name and value separated by a colon).
+It is a common practice to declare objects with the const keyword.-->
+<script>
+// Create an object:
+const car = {type:"Fiat", model:"500", color:"white"};
+
+// Display some data from the object:
+document.getElementById("demo").innerHTML = "The car type is " + car.type;
+</script>
+
+  <!-- You define (and create) a JavaScript object with an object literal: -->
+  <script>
+// Create an object:
+const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+
+// Display some data from the object:
+document.getElementById("demo").innerHTML =
+person.firstName + " is " + person.age + " years old.";
+</script>
+
+  <!-- Spaces and line breaks are not important. An object definition can span multiple lines: -->
+  <script>
+// Create an object:
+const person = {
+  firstName: "John", 
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue"
+};
+
+// Display some data from the object:
+document.getElementById("demo").innerHTML =
+person.firstName + " is " + person.age + " years old.";
+</script>
+
+  <!-- The name:values pairs in JavaScript objects are called properties:
+    firstName (Property) ---- John(Property Value) 
+  
+  You can access object properties in two ways:
+      objectName.propertyName
+            or
+      objectName["propertyName"]
+  JavaScript objects are containers for named values called properties.
+-->
+  <script>
+// Create an object:
+const person = {
+  firstName: "John",
+  lastName : "Doe",
+  id     :  5566
+};
+
+// Display some data from the object:
+document.getElementById("demo").innerHTML =
+person.firstName + " " + person.lastName;
+</script>
+
+  <script>
+// Create an object:
+const person = {
+  firstName: "John",
+  lastName : "Doe",
+  id     :  5566
+};
+
+// Display some data from the object:
+document.getElementById("demo").innerHTML =
+person["firstName"] + " " + person["lastName"];
+</script>
+
+  <!-- Methods are actions that can be performed on objects.
+Methods are stored in properties as function definitions.
+  fullName(Property)----function() {return this.firstName + " " + this.lastName;}(Property value) -->
+  <script>
+    const person = {
+  firstName: "John",
+  lastName : "Doe",
+  id       : 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+  </script>
+ <!-- In the example above, this refers to the person object.
+I.E. this.firstName means the firstName property of this.
+I.E. this.firstName means the firstName property of person. 
+  
+  Accessing Object Methods
+You access an object method with the following syntax:
+  objectName.methodName()
+        or
+  name = person.fullName(); -->
+  <script>
+// Create an object:
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  id: 5566,
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+// Display data from the object:
+document.getElementById("demo").innerHTML = person.fullName();
+</script>
+
+  <!-- Do Not Declare Strings, Numbers, and Booleans as Objects!
+When a JavaScript variable is declared with the keyword "new", the variable is created as an object:
+
+x = new String();        // Declares x as a String object
+y = new Number();        // Declares y as a Number object
+z = new Boolean();       // Declares z as a Boolean object
+Avoid String, Number, and Boolean objects. They complicate your code and slow down execution speed. 
+  
+  
+  const person = {
+  firstName: "John",
+  lastName: "Doe"
+};
+alert(person.firstName);-->
+
+  
+</body>
+
+</html>

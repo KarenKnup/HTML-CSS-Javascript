@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--
+  --- CARACTERÍSTICAS DO JAVASCRIPT ----
+• Linguagem poderosa, com sua grande aplicação do lado cliente, ou seja, executada pelo browser;
+• É uma linguagem de scripts que permite interatividade nas páginas web;
+• Podemos definir scripts como pequenas sequências de instruções (“miniprogramas”) interpretados pelo browser e voltados para execução de tarefas específicas;
+• Ele é incluído na página HTML e interpretada pelo navegador;
+• Sua linguagem e estrutura são simples, porém pode-se criar construções complexas e criativas;
+• JavaScript não é Java; são linguagens com aplicações e recursos totalmente distintos;
+• Não é capaz de recuperar informações de outro arquivo ou salvar dados em um servidor da Web, ou no computador do usuário.
+
+--- O QUE FAZER COM JAVASCRIPT ---
+•Interagir com o código HTML, adicionando interatividade a sua página (em geral as páginas HTML são estáticas);
+• Criar janelas popup;
+• Interação com formulários (validando dados, por exemplo);
+• Cálculos;
+• Efeitos especiais;
+• Atualização do conteúdo da página após sua visualização;
+• Criar cookies (O que são cookies?);
+• Abrir janelas do navegador, trocar informações entre janelas, manipular propriedades como histórico, barra de status, plug-ins, applets e outros objetos;
+• Interagir com o usuário através do tratamento de eventos;
+• Estes são apenas exemplos... Use sua imaginação!
+
+--- CARACTERÍSTICAS BÁSICAS: OBJECT (DOM) ---
+https://www.w3schools.com/jsref/dom_obj_event.asp
+• Ao renderizar uma página web, o navegador constrói o DOM (Document Object Model), uma coleção hierárquica de objetos que representam os elementos HTML presentes na página;
+• Cada elemento é representado no DOM por um objeto diferente, incluindo objetos globais (como window e document) que não estão vinculados a elementos HTML. Um objeto é uma coleção de propriedades e que possui um comportamento definido por seus métodos.
+
+-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    
+  </head>
+  
+  <body>
+    <!--DOM-->
+    <p id="idLugar"></p>
+    <img  id="img1" width="70%" >
+    <br><br>
+    <button type="button" onclick="myFunction()">Change color of the border</button>
+
+    <script type="text/javascript">
+      var lugar;
+      lugar=document.getElementById("idLugar");
+      lugar.innerHTML="Olá mundo!";
+      lugar.style.color="lightgreen";
+      lugar.style.background="black";
+       function myFunction() {
+    document.getElementById("img1").style.borderColor = "red";
+  } document.getElementById("img1").src="https://i.imgur.com/5ZeC9oR.png";
+      document.getElementById("img1").style.border="5px dashed";
+      document.getElementById("img1").style.borderColor = "green";
+    </script>
+<!---------------------------------------------->
+    <br><br>
+    <button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
+    <p id="demo"></p>
+
+
+  </body>
+
+</html>

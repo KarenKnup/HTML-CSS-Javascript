@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<!-- JavaScript strings are for storing and manipulating text.-->
+<head>
+  <meta charset="utf-8">
+ 
+</head>
+
+<body>
+  <p id="demo"></p>
+<script>
+let text = "John Doe";  // String written inside quotes
+document.getElementById("demo").innerHTML = text;
+</script>
+
+  <!-- You can use single or double quotes: -->
+  <script>
+let carName1 = "Volvo XC60"; // Double quotes
+let carName2 = 'Volvo XC60'; // Single quotes
+
+document.getElementById("demo").innerHTML =
+carName1 + " " + carName2; 
+</script>
+
+  <!-- You can use quotes inside a string, as long as they don't match the quotes surrounding the string: -->
+  <script>
+let answer1 = "It's alright";
+let answer2 = "He is called 'Johnny'";
+let answer3 = 'He is called "Johnny"'; 
+
+document.getElementById("demo").innerHTML =
+answer1 + "<br>" + answer2 + "<br>" + answer3; 
+</script>
+
+  <!-- To find the length of a string, use the built-in length property:-->
+  <p>The length of the string is:</p>
+<p id="demo"></p>
+
+<script>
+let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+document.getElementById("demo").innerHTML = text.length;
+</script>
+
+  <!-- Escape Character
+  let text = "We are the so-called "Vikings" from the north.";
+The string will be chopped to "We are the so-called ".
+-->
+  <p>The escape sequence \" inserts a double quote in a string.</p>
+<p id="demo"></p>
+<script>
+let text = "We are the so-called \"Vikings\" from the north.";
+document.getElementById("demo").innerHTML = text; 
+</script>
+
+  <p>The escape sequence \\ inserts a backslash in a string.</p>
+<p id="demo"></p>
+<script>
+let text = "The character \\ is called backslash.";
+document.getElementById("demo").innerHTML = text; 
+</script>
+
+<p>The escape sequence \' inserts a single quote in a string.</p>
+<p id="demo"></p>
+<script>
+let text = 'It\'s alright.';
+document.getElementById("demo").innerHTML = text; 
+</script>  
+  <!-- \b	Backspace
+\f	Form Feed
+\n	New Line
+\r	Carriage Return
+\t	Horizontal Tabulator
+\v	Vertical Tabulator -->
+
+  <!-- Breaking Long Code Lines
+  The \ method is not the preferred method. It might not have universal support. You cannot break up a code line with a backslash
+
+-->
+  <p>
+The best place to break a code line is after an operator or a comma.
+</p>
+<p id="demo"></p>
+<script>
+document.getElementById("demo").innerHTML =
+"Hello Dolly!";
+</script>
+
+  <p id="demo"></p>
+<script>
+document.getElementById("demo").innerHTML = "Hello \
+Dolly!";
+</script>
+
+  <p id="demo"></p>
+<script>
+document.getElementById("demo").innerHTML = "Hello " +
+"Dolly!";
+</script>
+
+  <p id="demo">You cannot break a code line with a \ backslash.</p>
+<script>
+document.getElementById("demo").innerHTML = \
+"Hello Dolly.";
+</script>
+
+  <!-- JavaScript Strings as Objects
+  
+  Do not create Strings objects.
+The new keyword complicates the code and slows down execution speed.-->
+  <script>
+// x is a string
+let x = "John";
+
+// y is an object
+let y = new String("John");
+
+document.getElementById("demo").innerHTML =
+typeof x + "<br>" + typeof y;
+</script>
+
+
+  <script>
+let x = "John";        // x is a string
+let y = new String("John");  // y is an object
+document.getElementById("demo").innerHTML = (x==y);
+</script>
+
+  <script>
+let x = "John";        // x is a string
+let y = new String("John");  // y is an object
+document.getElementById("demo").innerHTML = (x===y);
+</script>
+
+  <!-- Comparing two JavaScript objects always returns false.
+
+let txt = "Hello World!";
+let x = txt.length;
+alert(x);
+
+  Concatenate the two strings to alert "Hello World!".
+let str1 = "Hello ";
+let str2 = "World!";
+alert(str1 + str2);
+
+  -->
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- 
+• FLOAT ~~ especifica como um elemento específico deve flutuar
+      left
+      right
+      none 
+      inherit / next to each other
+
+• CLEAR ~~ especifica quais elementos podem flutuar ao lado do elemento desmarcado e em qual lado
+    FLOAT LEFT                           FLOAT RIGHT
+-->
+<html>
+
+  <head>
+    <!-- FLOAT: RIGHT / LEFT / NONE -->
+    <style>
+      img {
+        float: right; 
+      }
+    </style>
+
+
+    <!-- FLOAT: INHERIT / NEXT TO EACH OTHER -->
+   <style>
+      div {
+        float: left;
+        padding: 15px; 
+      }
+      
+      .div1 {
+        background: red;
+      }
+      
+      .div2 {
+        background: yellow;
+      }
+      
+      .div3 {
+        background: green;
+      }
+    </style>
+
+
+
+
+    
+  <body>
+    <!-- FLOAT: RIGHT / LEFT / NONE -->
+    <p>In this example, the image will float to the right in the paragraph, and the text in the paragraph will wrap around the image.</p>
+
+    <p><img src="https://www.w3schools.com/css/pineapple.jpg" alt="Pineapple" style="width:170px;height:170px;margin-left:15px;">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p>
+
+    <hr><br>
+
+    <!-- FLOAT: INHERIT -->
+    <p>In this example, the three divs will float next to each other.</p>
+
+    <div class="div1"> 1</div>
+    <div class="div2"> 2</div>
+    <div class="div3"> 3</div>
+    
+
+
+  </body>
+
+</html>

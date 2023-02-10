@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!-- 4 Ways to DECLARE a JavaScript VARIABLE:
+      * Using var
+      * Using let ~~ If you think the value of the variable can change, use let
+      * Using const ~~ If you want a general rule: always declare variables with const ~~ não podem mudar
+      * Using nothing
+---------------------------------------------------
+IDENTIFIERS - All JavaScript variables must be identified with unique names. Identifiers are case-sensitive.
+These unique names are called identifiers.
+     * Names can contain letters, digits, underscores, and dollar signs.
+     * Names must begin with a letter.
+     * Names can also begin with $ and _ (but we will not use it in this tutorial).
+     * Names are case sensitive (y and Y are different variables).
+     * Reserved words (like JavaScript keywords) cannot be used as names.
+---------------------------------------------------
+ASSIGNMENT OPERATOR (=) - The Assignment Operator
+In JavaScript, the equal sign (=) is an "assignment" operator, not an "equal to" operator.
+This is different from algebra. The following does not make sense in algebra:
+      x = x + 5
+---------------------------------------------------
+DATA TYPES - JavaScript variables can hold numbers like 100 and text values like "John Doe".
+In programming, text values are called text strings.
+JavaScript can handle many types of data, but for now, just think of numbers and strings.
+Strings are written inside double or single quotes. Numbers are written without quotes.
+If you put a number in quotes, it will be treated as a text string.
+      const pi = 3.14;
+      let person = "John Doe";
+      let answer = 'Yes I am!';
+---------------------------------------------------
+DECLARING A VARIABLE - Creating a variable in JavaScript is called "declaring" a variable.
+You declare a JavaScript variable with the var or the let keyword:
+
+      var carName;     or:    let carName;
+After the declaration, the variable has no value (technically it is UNDEFINED).
+
+To assign a value to the variable, use the equal sign:
+      carName = "Volvo";
+You can also assign a value to the variable when you declare it:
+      let carName = "Volvo";
+
+It's a good programming practice to declare all variables at the beginning of a script.
+
+Example:
+      let person = "John Doe", carName = "Volvo", price = 200;
+       or
+      let person = "John Doe",
+      carName = "Volvo",
+      price = 200;
+
+Example:
+      var carName = "Volvo";
+      var carName;
+If you re-declare a JavaScript variable, it will not lose its value. Will appear "Volvo".
+You cannot re-declare a variable declared with let or const.
+
+---------------------------------------------------
+ARITHMETIC
+
+Example:
+    <script>
+    let x = 5 + 2 + 3;
+    document.getElementById("demo").innerHTML = x;
+    </script>
+
+Example: string
+    <script>
+    let x = "John" + " " + "Doe";
+    document.getElementById("demo").innerHTML = x;
+    </script>
+
+OBS: If you put a number in quotes, the rest of the numbers will be treated as strings, and concatenated.
+    let x = "5" + 2 + 3;  == 523
+
+    <script>
+    let x = 2 + 3 + "5"; == 55
+    document.getElementById("demo").innerHTML = x;
+    </script>
+---------------------------------------------------
+DOLLAR SIGN ($) - Since JavaScript treats a dollar sign as a letter, identifiers containing $ are valid variable names:
+
+    <script>
+    let $$$ = 2;
+    let $myMoney = 5;
+    document.getElementById("demo").innerHTML = $$$ + $myMoney; == 7
+    </script>
+
+Using the dollar sign is not very common in JavaScript, but professional programmers often use it as an alias for the main function in a JavaScript library.
+
+In the JavaScript library jQuery, for instance, the main function $ is used to select HTML elements. In jQuery $("p"); means "select all p elements".
+
+---------------------------------------------------
+UNDERSCORE (_) - Since JavaScript treats underscore as a letter, identifiers containing _ are valid variable names:
+
+<script>
+let _x = 2;
+let _100 = 5;
+document.getElementById("demo").innerHTML = _x + _100; == 7
+</script>
+
+Using the underscore is not very common in JavaScript, but a convention among professional programmers is to use it as an alias for "private (hidden)" variables.
+--------------------------------------------------
+Create a variable called z, assign x + y to it, and display the result in an alert box.
+
+var x = 5;
+var y = 10;
+var z = x + y;
+alert (z);
+----------------------------------------------------
+let length = 16;    // Number
+
+let lastName = "Johnson"; // String
+
+const x = {
+  firstName: "John",
+  lastName: "Doe"
+};       //Object
+
+-->
+<html>
+
+<head>
+  <meta charset="utf-8">
+ 
+</head>
+
+<body>
+
+  <!-- VAR -->
+  <p>In this example, x, y, and z are variables.</p>
+  <p id="demo"></p>
+  <script>
+  var x = 5;
+  var y = 6;
+  var z = x + y;
+  document.getElementById("demo").innerHTML =
+  "The value of z is: " +z;
+  </script>
+
+  <!-- LET -->
+   <p id="demo"></p>
+
+<script>
+let x = 5;
+let y = 6;
+let z = x + y;
+document.getElementById("demo").innerHTML =
+"The value of z is: " + z;
+</script> 
+
+  <!-- UNDECLARED -->
+  <p id="demo"></p>
+  <script>
+  x = 5;
+  y = 6;
+  z = x + y;
+  document.getElementById("demo").innerHTML =
+  "The value of z is: " + z;
+  </script>
+
+  <!-- CONST -->
+  <p id="demo"></p>
+  <script>
+  const price1 = 5;
+  const price2 = 6;
+  let total = price1 + price2;
+  document.getElementById("demo").innerHTML =
+  "The total is: " + total;
+  </script> 
+  <!-- The two variables price1 and price2 are declared with the const keyword.
+These are constant values and cannot be changed.
+
+The variable total is declared with the let keyword.
+This is a value that can be changed.-->
+
+  <!-- DECLARING A VARIABLE -->
+  <p id="demo"></p>
+  <script>
+  let carName = "Volvo";
+  document.getElementById("demo").innerHTML = carName;
+  </script>
+</body>
+
+</html>

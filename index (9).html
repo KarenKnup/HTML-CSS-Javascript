@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- 
+• Em uma página WEB, cada elemento é representado como um box retangular. Determinar o tamanho, propriedades - como sua cor, fundo, estilo das bordas - e a posição desses boxes é o objetivo do mecanismo de renderização.
+
+• No CSS, cada um desses boxes retangulares é descrita usando o box model padrão. Este modelo descreve o conteúdo do espaço ocupado por um elemento. Cada box possui 4 edges: 
+  margin edge
+  border edge
+  padding edge 
+  content edge.
+
+• Content - The content of the box, where text and images appear
+• Padding - Clears an area around the content. The padding is transparent
+• Border - A border that goes around the padding and content
+• Margin - Clears an area outside the border. The margin is transparent
+
+-->
+<html>
+
+  <head>
+  <style>
+    div {
+      background-color: lightgrey; 
+      width: 300px;
+      border: 15px solid green;
+      padding: 50px;
+      margin: 20px;
+    }
+  </style>
+    <!-- 
+      background-color ~~ fundo do content (conteúdo/parte interna)
+      width ~~ largura
+      height ~~ altura
+      padding ~~ preenchimento (em torno do content / transparente)
+      border ~~ borda (em torno do preenchimento / padding)
+      margin ~~ margem (em torno da borda)
+    -->
+
+    <style>
+      .div {
+        width: 320px;
+        padding: 10px;
+        border: 5px solid gray;
+        margin: 0;
+      }
+    </style>
+
+    <!-- BOX MODEL - AULA -->
+    <style>
+        .div {
+          background-color: lightgrey;
+          width: 300px;
+          border: 15px solid green;
+          padding: 10px, 10px, 10px, 50px;
+          margin: 20px;
+        }
+        .p{
+          border: 5px dashed lightgrey;
+          padding: 10px; 
+          margin-bottom: 25px;
+          margin-top: 0px;
+          }
+        .h2 {
+          padding: 10px;
+          margin: 0px;
+          border: 12px double pink;
+          border-radius: 15px;
+        }
+    </style>
+  </head>
+  
+  <body>
+    <h2>Demonstrating the Box Model</h2>
+    <img src="https://i.imgur.com/pfgGllb.png" width="450" height="263" alt="box model">
+  
+    <p>The CSS box model is essentially a box that wraps around every HTML element. It consists of: borders, padding, margins, and the actual content.</p>
+  
+    <div>This text is the content of the box. We have added a 50px padding, 20px margin and a 15px green border. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+
+    <hr><br>
+    <h2>Calculate the total width:</h2>
+
+    <!-- Here is the calculation:
+          320px (width)
+          + 20px (left + right padding)
+          + 10px (left + right border)
+          + 0px (left + right margin)
+          = 350px
+The total width of an element should be calculated like this:
+
+Total element width = width + left padding + right padding + left border + right border + left margin + right margin
+
+The total height of an element should be calculated like this:
+
+Total element height = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin -->
+
+    <img src="https://www.w3schools.com/css/klematis4_big.jpg" width="350" height="263" alt="Klematis">
+    <div class="div">The picture above is 350px wide. The total width of this element is also 350px.</div>
+
+    <br><hr>
+
+    <!--BOX MODEL - AULA -->
+    <h2 class="h2">Demonstrating the Box Model</h2>
+
+<p class="p">The CSS box model is essentially a box that wraps around every HTML element. It consists of: borders, padding, margins, and the actual content.</p>
+
+<div class="div">This text is the content of the box. We have added a 50px padding, 20px margin and a 15px green border. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+
+  </body>
+
+</html>

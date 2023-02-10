@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<!-- A JavaScript function is a block of code designed to perform a particular task.
+
+A JavaScript function is executed when "something" invokes it (calls it).
+  
+  function name(parameter1, parameter2, parameter3) {
+  // code to be executed
+
+  Function parameters are listed inside the parentheses () in the function definition.
+
+Function arguments are the values received by the function when it is invoked.
+
+Inside the function, the arguments (the parameters) behave as local variables.
+}-->
+  
+<head>
+  <meta charset="utf-8">
+ 
+</head>
+
+<body>
+  <h2>JavaScript Functions</h2>
+<p>This example calls a function which performs a calculation, and returns the result:</p>
+
+<p id="demo"></p>
+
+<script>
+function myFunction(p1, p2) {
+  return p1 * p2;
+}
+document.getElementById("demo").innerHTML = myFunction(4, 3);
+</script>
+<!-------------------------------------------->
+  <script>
+var x = myFunction(4, 3);
+document.getElementById("demo").innerHTML = x;
+
+function myFunction(a, b) {
+  return a * b;
+}
+</script>
+<!-------------------------------------------->
+<script>
+function toCelsius(f) {
+  return (5/9) * (f-32);
+}
+document.getElementById("demo").innerHTML = toCelsius(77);
+</script>
+<!-------------------------------------------->
+  <script>
+document.getElementById("demo").innerHTML =
+"The temperature is " + toCelsius(77) + " Celsius";
+
+function toCelsius(fahrenheit) {
+  return (5/9) * (fahrenheit-32);
+} 
+</script>
+  <!-------------------------------------------->
+<script>
+document.getElementById("demo").innerHTML =
+"The temperature is " + toCelsius(77) + " Celsius";
+
+function toCelsius(fahrenheit) {
+  return (5/9) * (fahrenheit-32);
+} 
+</script>
+    <!-------------------------------------------->
+<p id="demo2"></p>
+
+<script>
+myFunction();
+
+function myFunction() {
+  let carName = "Volvo";
+  document.getElementById("demo1").innerHTML =
+  typeof carName + " " + carName;
+}
+
+document.getElementById("demo2").innerHTML =
+typeof carName;
+</script>
+    <!-------------------------------------------->
+<script>
+  function MyFunction(){
+    alert("Hello World!");
+  }
+  MyFunction();
+</script>
+    <!-------------------------------------------->
+<script>
+ function myFunction() {
+    return "Hello";
+}
+document.getElementById("demo").innerHTML = myFunction();
+</script>
+</body>
+
+</html>

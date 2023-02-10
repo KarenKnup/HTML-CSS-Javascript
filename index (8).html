@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!--
+• Seletor de Filhos --- Um elemento filho é caraterizado por elementos separados por ">".
+    Exemplo: div ol > li p {color: green; }
+Todos os elementos p serão de cor verde quando estiverem dentro de um elemento item <li>, filho de uma lista <ol> dentro de uma <div>.
+
+• Seletores DESCENDENTES --- Um elemento pode estar contido dentro de outro elemento.
+    Exemplos:
+  h1 { color: red; }
+/* indica que todos os elementos <h1> possuem
+a cor vermelha */
+
+  h1 em { color: blue; }
+/* indica que os elementos <em> contidos em um elemento <h1> possuem a cor azul */
+
+  p.intro a { color: yellow; }
+/* indica que todos os links <a> que sejam descendentes de um parágrafo <p> dentro da classe intro terão cor amarela */
+
+• Irmãos Adjacentes --– são tags que compartilham o mesmo pai
+    Exemplo: <h1><em>Descendentes!!</em></h1> --- "h1" e "em"
+
+• PSEUDOCLASSES e PSEUDOELEMENTOS --- Servem para estilizar partes de uma página Web que não possuem tags em si, mas que são fáceis de identificar, como a 1a linha de um parágrafo ou um link quando você passa o mouse sobre ele;
+  Existem 4 pseudoclasses para 4 estados diferentes de link de acordo com a interação do visitante sobre ele:
+    1. a:link => seleciona qualquer link que ainda não tiver sido visitado (mouse não está sobre ele nem se clicou nele);
+    2. a:visited => link que já foi clicado, de acordo com o histórico do navegador Web;
+    3. a:hover => altera a aparência do link à medida que seu visitante passa o mouse sobre ele;
+    4. a:active => determina a aparência do link quando o visitante clicar nele (breve nanosegundo).
+
+      Dicas: 
+        --- a:hover é ótimo para um feedback visual referente aos botões de uma barra de navegação; 
+        --- Pode-se utilizar a pseudoclasse :hover em elementos que não sejam links, como: destaque de um parágrafo <p> ou um bloco <div> quando o usuário passar o mouse sobre ele;
+
+•  Herança --- significa justamente a possibilidade de elementos filhos herdarem características de estilização de elementos superiores, estas definidas por suas propriedades, que podem ou não passar aos seus descendentes seus valores.
+      Exemplo: 
+  <p>Este paragrafo tem <em>texto enfatizado</em> dentro dele.</p>
+As palavras "texto enfatizado" vão aparecer em verde, já que o elemento em herdou o valor da propriedade color do elemento p. Ele não obtém o valor inicial da propriedade (o qual é a cor usada pelo elemento raiz quando a página não especifica nenhuma cor).
+
+• Estilos Herdados Aglomerados:  
+  Exemplo:
+      body { font-family: Verdana, Arial, Helvetica, Sans-serif; }
+      p { color: #F30; }
+      strong { font-size: 24px; }
+
+• Ascendente mais próximo vence:
+Imagine uma página onde se definiu cor de fonte para as tags do corpo e do
+parágrafo. E se dentro do parágrafo <p> houver uma tag <strong>? Qual será a cor aplicada dentro da tag <strong>: a cor herdada do corpo ou do 
+ parágrafo?
+O vencedor será o parágrafo, pois o navegador obedece ao estilo que está mais próximo da tag em questão.
+
+• Estilo aplicado diretamente vence:
+Suponha agora que uma cor de fonte seja definida para o corpo, o parágrafo e a tag <strong>. O estilo do parágrafo é mais específico que o estilo do corpo, mas o estilo aplicado à tag <strong> é mais específico que qualquer um dos dois.
+
+• Uma tag, Muitos estilos:
+  Algumas situações:
+    (1) A tag possui um seletor de tags e um estilo de classe aplicado a ela;
+    (2) O mesmo nome de estilo aparece mais de uma vez na folha de estilo;
+    (3) Uma tag tem uma classe e um estilo de ID aplicados a ela.
+
+• O desempate: o último estilo prevalece
+
+• Alterando a especificidade: Existem formas de invalidar ou alterar a especificidade.
+    (1) Para invalidar, basta inserir “!important” depois de qualquer propriedade para a proteger;
+    (2) Para aumentar a especificidade de uma classe, por exemplo, adicione o nome do ID ao estilo (o mesmo raciocínio vale para outros seletores);
+    (3) Para uma sobrescrita seletiva, utilize uma folha de estilo externa com os estilos que deseje sobrescrever, adicione a mesma à página Web e depois disso crie uma folha de estilos interna com os estilos que deseje sobrescrever;
+
+• Começando com uma página sem formatações: Para “apagar” a formatação embutida no navegador e fornecer a sua própria formatação, utiliza-se “reset de CSS”.
+    /* reset browser styles */
+    html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, variable, form, fieldset,
+    blockquote { padding: 0; margin: 0; font-size: 100%; font-weight: normal;}
+    ol { margin-left: 1.4em; list-style: decimal; }
+    ul { margin-left: 1.4em; list-style:square; }
+    img { border: 0;}
+    /* end reset browser styles */
+-->
+
+<html>
+
+<head>
+  <!--Seletor de FILHOS-->
+  <style>
+    ol > li em {color: green; }
+  </style>
+
+  <!--Seletor de DESCENDENTES -->
+  <style>
+    h1 { color: red; }
+    h1 em { color: blue; }
+    p.intro a { color: yellow; }
+  </style>
+
+  <!--Pseudoclasses e Pseudoelementos -->
+  <style>
+    a:visited { 
+      font-size: 5em;
+      color: pink;
+    }
+    a:hover {
+      color: orange;
+    }
+    a:active {
+      color: lightblue;
+    }
+    h2::first-letter {
+      font-size: 200%;
+      color: #8A2BE2;
+    }
+    h3::first-line {
+      background-color: yellow;
+    }
+    h4::before {
+      content: "Read this -";
+    }
+    h4::after { 
+  content: " - Remember this";
+    }
+    p:first-child {
+      background-color: pink;
+    }
+    input:focus {
+      background-color: lightskyblue;
+    }
+</style>
+
+  <!--Herança -->
+  <style>
+    p { 
+      color: lightcoral; 
+    }
+  </style>
+
+  <!--Exercícios-->
+  <style>
+    #copy {color: blue;}
+    .copy { color: red; }
+  </style>
+</head>
+
+<body>
+
+  <!--Seletor de FILHOS-->
+  <div>
+    <ol> Teste de Filhos:
+      <li><em>Olá</em></li>
+    </ol>
+  </div>
+  
+  <br><hr>
+  <!--Seletor de DESCENDENTES -->
+  <h1>Descendentes!</h1>
+  
+  <h1><em>Descendentes!!</em></h1>
+  
+  <p class="intro"><a href="www.google.com">GOOGLE</a></p>
+
+  <br><hr>
+  <!--Pseudoclasses e Pseudoelementos -->
+  <a href="https://www.w3schools.com">W3Schools Home</a>
+  <p><a href="www.google.com">GOOGLE</a></p>
+  
+  <h2>Teste!</h2>
+  
+  <h3>Teste!!</h3>
+  
+  <h4>Hello!</h4>
+  
+  <p>This paragraph is the first child of its parent (body).</p>
+  <p>This paragraph is not the first child of its parent (body).</p>
+<div>
+  <p>This paragraph is the first child of its parent (div).</p>
+  <p>This paragraph is not the first child of its parent (div).</p>
+</div>
+
+  <form>
+  First name: <input type="text" name="firstname"><br>
+  Last name: <input type="text" name="lastname">
+</form>
+
+<br><hr>
+  <!--Herança -->
+  <p>Este paragrafo tem <strong>texto enfatizado</strong> dentro dele.</p>
+
+  <!-- EXERCÍCIO 1: Considerando:
+      #copy {color: blue;}
+      .copy { color: red; }
+    Qual será a cor do texto abaixo?
+    <div id="copy">
+        <p class="copy"><i>Teste<i></p>
+    </div>
+  -->
+  <div id="copy">
+        <p class="copy"><i>Teste<i></p>
+    </div>
+</body>
+
+</html>

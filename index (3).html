@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--
+• Tabelas - São elementos que representam dados de uma ou mais dimensões. 
+
+• <TABLE>: Elemento básico para criação da tabela. 
+• <CAPTION>: Elemento que indica o título da tabela. 
+• <THEAD>: Neste elemento, encontram-se as linhas que formam o título de cada coluna da tabela. 
+ • <TBODY>: Neste elemento, encontram-se os dados de cada coluna. 
+• <TFOOT>: Neste elemento, encontram-se as informações finais de cada coluna. 
+• <TR>: Elemento que cria uma linha na tabela. 
+• <TD>: Elemento que cria uma coluna na tabela. 
+• <TH>: Este elemento é idêntico ao <TD>, só é utilizado dentro da TAG de título. 
+-->
+<html>
+
+  <head>
+   
+  </head>
+
+  <body>
+   <table> <!-- Cria tabela -->
+			<caption>PROMOÇÕES</caption> <!-- Título da tabela -->
+		<tr> <!-- Cria linha -->
+			<th>Dia da semana</th> <!-- Cria títulos do header -->
+			<th>Item</th>
+			<th>Preço (R$) </th>
+		</tr>
+		<tr>
+			<td>Segunda</td> <!-- Cria coluna p/ cada header/coluna -->
+			<td>Mandioca</td>
+			<td>1,50/kg</td>
+		</tr>
+		<tr>
+			<td>Terça</td>
+			<td>Banana</td>
+			<td>3,00/kg</td>
+		</tr>
+		<tr>
+			<td>Quarta</td>
+			<td>Bergamota</td>
+			<td>2,00/kg</td>
+		</tr>
+		</table>
+
+    <hr>
+    
+    <table>
+      <caption>Lista de preços</caption>
+    <thead> <!--  linhas que formam o título de cada coluna da tabela -->
+    <tr>
+      <th>Serviço</th>
+      <th>Tempo</th>
+      <th>Valor</th>
+    </tr>
+    </thead>
+    <tbody> <!--encontram-se os dados de cada coluna  -->
+    <tr>
+      <th>Corte de Cabelo</th>
+      <td>10 Min</td>
+      <td>R$ 5,00</td>
+    </tr>
+    <tr>
+      <th>Manicure</th>
+      <td>30 Min</td>
+      <td>R$ 20,00</td>
+    </tr>
+    <tr>
+      <th>Pedicure</th>
+      <td>30 Min</td>
+      <td>R$ 10,00</td>
+    </tr>
+    </tbody>
+   </table>
+
+    <hr>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Month</th>
+          <th>Savings</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>January</td>
+          <td>$100</td>
+        </tr>
+        <tr>
+          <td>February</td>
+          <td>$80</td>
+        </tr>
+      </tbody>
+      <tfoot> <!--encontram-se as informações finais de cada coluna -->
+        <tr>
+          <td>Sum</td>
+          <td>$180</td>
+        </tr>
+      </tfoot>
+    </table>
+    
+  </body>
+
+</html>

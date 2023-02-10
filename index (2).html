@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  
+<!-- “As tags HTML normalmente vem em pares, como <p> (tag de abertura) e </p> (tag de finalização/fechamento).”
+
+  
+  Faz-se uso delas para identificar/instruir:
+• O elemento root;
+• Metadados;
+• Script;
+• Seções;
+• Agrupamento de conteúdo;
+• Semânticas de nível de texto;
+• Edições;
+• Conteúdo incorporado;
+• Tabelas;
+• Formulários;
+• Conteúdo Interativo.
+
+  
+  Atributos de uma TAG - Atributos são informações que passamos na Tag para que ela se comporte da maneira
+esperada.
+    Exemplo: 
+  <p (tag de abertura) class(atributo)="important (valor)"> This is a paragraph. (conteúdo) </p> (tag de fechamento)  
+
+  
+  Elementos de semântica - definem diferentes partes numa página Web.
+• <aside></aside> - informações não relacionadas com o texto (comerciais pagos, links promocionais etc.)
+• <details>
+• <figcaption>
+• <figure>
+• <footer></footer - rodapé do elemento - Este elemento contém basicamente as informações sobre o conteúdo da seção,
+como por exemplo o autor, links relacionados, etc.
+• <header></header> - título de um elemento/seção(section)
+• <main>
+• <mark>
+• <nav></nav> - seção onde ficam as informações de navegação de página, como links internos (própria página) ou externos (outras páginas). 
+• <section></section> - representa uma seção genérica dentro de um documento. Este elemento pode conter um agrupamento de textos com vários capítulos, seções numeradas etc.
+• <article></article> - É um artigo independente dentro de um texto, este elemento pode estar ou não dentro de um elemento
+<section>. (Imagine um jornal com as seções de esportes, fofocas etc. Dentro de cada seção existem vários artigos
+sobre textos específicos) 
+• <summary>
+• <time>
+
+  
+  Tags específicas:
+• <nav></nav>
+• <article></article>
+• <section></section>
+• <header></header>
+• <footer></footer>
+• <aside></aside>
+
+  
+  Tags textuais:
+• <h1></h1>, <h2>, <h3>, <h4>, <h5>, e <h6></h6> / <hgroup></hgroup> - representam o título (header) de cada seção, sendo <h1> o maior título e <h6> o menor título.
+• <p></p> - Elemento que representa um parágrafo.
+• <hr> - Elemento que representa uma quebra de parágrafo ou tema exibindo uma linha horizontal.
+• <pre></pre> - Este elemento apresenta um bloco de texto pré-formatado, preservando seu conteúdo.
+• <blockquote></blockquote> - Tem como função exibir o texto
+indicando de qual referência foi retirado (citação).
+• <figure></figure> - permite definir logicamente as informações de uma imagem.
+  <figcaption> - Elemento que permite dar um título a uma imagem.
+  <img> - Elemento que exibe a imagem.
+  alt - atributo mostrado caso a imagem não possa ser exibida
+• <div></div> - Elemento que representa um bloco de texto. As TAGs <body>, <header>, <footer> etc., possuem regras de
+utilização bem definidas.
+  Caso o desenvolvedor necessite da criação de um bloco de texto que não se encaixe em alguma regra definida de bloco, pode-se utilizar o recurso da <div>.
+  A <div> é um bloco de texto que pode ser usado em qualquer lugar do documento. Geralmente, a <div> é usada para
+diagramar o layout de um site (com CSS).
+
+
+  Tags semânticas:
+• <a></a> - Elemento que representa um hiperlink 
+    Atributos mais comuns:
+      href = A URL que fornece o destino do hiperlink.
+      target = nome de navegação ao contexto ou uso de palavra-chaves (seguintes strings literais): "_blank", "_self", "_parent", ou "_top".
+• <br> - quebra de linha
+
+
+  Tags para LISTAS:
+• <ol></ol> - lista ordenada/numerada
+  Atributos da lista:
+    reversed = altera a ordem da lista.
+    start = Valor inicial da lista
+    type = Altera o numerador da lista.
+• <li></li> - elementos da lista
+• <ul></ul> - lista não ordenada/numerada
+  -->
+  
+<head>
+  <meta charset="utf-8">
+  <title>Page Title</title>
+  <nav> 
+    <h1>Menu Principal</h1>
+    <ul>
+      <li><a href=“https://www.w3schools.com">W3 Schools</a></li>
+      <li><a href="http://www.faeterj-rio.edu.br"> FAETERJ-Rio</a></li>
+    </ul>
+  </nav> 
+</head>
+
+<body>
+  <article>
+    <header>
+      <h1>Nova Vitória !</h1>
+    </header>    
+      <p>O time A ganhou novamente, se continuar assim será líder do campeonato...</p>
+      <p>...</p>
+
+    <hr>
+    <header>
+      <p>O curso de HTML é muito importante </p>
+    </header>
+
+    <div>
+    <figure>
+      <figcaption>Foto de Férias</figcaption>
+      <img src="stata.jpg" alt="Foto das férias no Rio de Janeiro">
+    </figure></div>
+    <figure>
+			<img src="./oranges.jpg" width="50%" height="60%" alt="Laranjas">
+			<figcaption>Laranjas acima</figcaption>
+		</figure>
+		<figure>
+			<img src="https://s2.glbimg.com/vWD5qCZdkRfs4Txo9kbjFMcUas4=/620x455/e.glbimg.com/og/ed/f/original/2019/07/19/laranja.jpg">
+		</figure>
+
+    <hr>
+    <ol>
+			<li>Item 1</li>
+			<li>Item 2</li>
+		</ol>
+		
+		<ol type="1">
+			<li>Item 1</li>
+			<li>Item 2</li>
+		</ol>
+		
+		<ol type="a">
+			<li>Item 1</li>
+			<li>Item 2</li>
+		</ol>
+		
+		<ol type="I">
+			<li>Item 1</li>
+			<li>Item 2</li>
+		</ol>
+		
+		<ol start="5" type="1">
+			<li>Item 1</li>
+			<li>Item 2</li>
+			<li>Item 3</li>
+			<li>Item 4</li>
+			<li>Item 5</li>
+			<li>Item 6</li>
+			<li>Item 7</li>
+			<li>Item 8</li>
+		</ol>
+		
+		<ol type="1" reversed>
+			<li>Item 1</li>
+			<li>Item 2</li>
+			<li>Item 3</li>
+			<li>Item 4</li>
+			<li>Item 5</li>
+			<li>Item 6</li>
+			<li>Item 7</li>
+			<li>Item 8</li>
+		</ol>
+		
+
+    <ul>
+      <li> Construção de Aplicações Web</li>
+      <li> Fundamentos de Sistemas Operacionais</li>
+      <li> Cálculo</li>
+      <li> entre outras.</li>
+    </ul>
+    <hr>
+    
+    <section>
+      <h1>O HTML 5</h1>
+      <p>Surgimento do HTML 5</p>
+    </section>
+    
+    <aside>
+      <h1>Tenha uma graduação na área tecnológica !!! </h1>
+      <p><a href=“http://www.faeterj-rio.edu.br”>Estude na FAETERJ-Rio!</a></p>
+    </aside>
+    
+    <section>
+      <h1>Tags</h1>
+      <p>Comandos de criação de páginas.</p>
+    </section>
+
+    <hr>
+    <header>
+      <hgroup>
+        <h1>Livro sobre HTML</h1>
+        <h2>Como criar uma página</h2>
+      </hgroup>
+      <p>O curso de HTML é muito importante</p>
+    </header>
+    <section>
+      <h1>O HTML 5</h1>
+      <p>Surgimento do HTML 5</p>
+    </section>
+    <section>
+      <h1>Tags</h1>
+      <p>Comandos de criação de páginas.</p>
+    </section>
+
+    <hr>
+    <section> 
+      <h1> Tags HTML</h1>
+      <blockquote cite="https://www.quote.com/">
+					<p>QUOTE: "Teeexto...
+					Texto
+					Texto"</p></blockquote>
+    </section>
+    
+   <hr>
+			<pre>O PEQUENO PRÍNCIPE (TRECHO)
+					O essencial é invisível aos olhos.
+					Tu te tornas eternamente responsável por aquilo que cativas.</pre>
+    
+    <hr>
+    <footer> <a href="?comments=1">Comentários</a></footer>
+    <footer> <nav>
+      <p><a href="/credits.html">Créditos</a> ?
+      <a href="/tos.html">Termos Legais</a> ?
+      <a herf="/index.html">Mais Informações</a></p>
+      </nav>
+    </footer>
+  </article>
+</body>
+
+</html>

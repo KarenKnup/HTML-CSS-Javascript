@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--
+• Tag <form></form> - Formulários HTML são usados para transmitir dados
+para um servidor. Com eles é possível criar elementos de entrada, como campos de texto, caixas de seleção, botões e listas de seleção, áreas de texto, legendas, e elementos de
+rotulagem.
+
+  Atributos:
+    ☀ action = url onde será enviada as informações.
+    ☀ method = método de envio das informações GET ou POST
+   
+
+• <fieldset></fieldset> - Elemento que permite um agrupamento de informações geralmente utilizado como seção dentro de um formulário.
+• <legend></legend> - Elemento que indica o título da TAG <fieldset>.
+• <label></label> - Elemento que representa o título de uma TAG de entrada. O atributo for= Indica qual elemento está relacionado.
+• <input> - usado para a criação de campos do formulário, em função do tipo (atributo type) pode ser de tipo campo de texto, caixa de seleção, botão de opção de senha, botão enviar, dentre outros.
+• <button></button> - botões
+• <select></select> - caixas de seleção
+-->
+
+<html>
+
+  <head>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+   
+   <form action="http://www.google.com/search" method="get">
+<label>Google: <input type="search" name="q"></label>
+<input type="submit" value="Search...">
+</form>
+
+    <br><hr>
+
+    <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    
+    <fieldset name="userinfo"> <!--informações de uma seção-->
+        <legend>Informações do usuário</legend> <!--Título da seção-->
+        <label for="nome">Nome</label><!--Título da tag de entrada-->
+        <input type="text" name="nome" size="40"> <!-- Local onde o usuário escreve/coloca input (informações)-->
+        <label for="address">Endereço</label>
+        <input type="text" name="endereco" size="40">
+        <label for="phone">Phone</label>
+        <input type="text" name="phone" size="40">
+    </fieldset>
+
+    <br><hr>
+    
+    <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    
+    <!--Criando campos de texto:
+Nome:--> <input type="text" name=“nome"><br>
+         <textarea rows="5" cols="25"> Comentários / Sugestões</textarea><br>
+
+    <br>
+    <!--Criando botões de seleção (radio):-->
+    <form>
+    <!--Selecione o sexo:-->
+    <input type="radio" name="sex" value=“masc">Masculino<br>
+    <input type="radio" name="sex" value="fem">Feminino
+    </form>
+
+    <br>
+    <!--Criando campo de senha (password):-->
+    Digite sua senha abaixo com 6 dígitos:<br>
+    <input type="password" maxlength="6" name="senha">
+
+    <!--Criando caixas de seleção (checkbox):-->
+    <br></br>Marque os esportes você pratica:<br>
+    <input type="checkbox" name=“esporte“ value=“volei" checked>Volei<br>
+    <input type="checkbox" name=“esporte“ value=“futebol"> Futebol<br>
+    <input type="checkbox" name=“esporte“ value=“outros" disabled>Outros<br><br>
+    
+    <!--Criando campo de envio múltiplo(file):-->
+    Selecione o arquivo:
+    <input type="file" name=“arquivo“ multiple><br><br>
+    
+    <!--Criando campo de data (date):-->
+    Nascimento: <input type="date" name="data"><br><br>
+    
+    <!--Criando campo de e-mail (email):-->
+    E-mail: <input type="email" name="email" placeholder="e-mail"><br><br>
+    
+    <!--Criando campo numérico com intervalo (number):-->
+    Valor entre 5 e 10: <input type="number" name="quantity" min="5" max="10">
+    
+    <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    <br><hr>
+    
+    <!--Criando botões:-->
+    <button type="submit" value="submit">ENVIAR</button><br><br>
+    <button type="reset" value="reset">RESETAR</button><br><br>
+
+    <!--Criando caixa de seleção:-->
+    <select name="profissao">
+    <option value="advogado">advogado</option>
+    <option value="medico">médico</option>
+    <option value="professor">Professor</option>
+    <option value="coveiro">Coveiro</option>
+    </select> <br>
+
+    <select>
+      <optgroup label="Humanas">
+        <option value="direito">Direito</option>
+        <option value="filisofia">Filosofia</option>
+      </optgroup>
+        <optgroup label=“Exatas">
+        <option value=“mat">Matemática</option>
+        <option value=“est">Estatística</option>
+      </optgroup>
+    </select> <br>
+
+    <input list="carros" name="carros">
+      <datalist id="carros">
+        <option value="Ferrari">
+        <option value="Porche">
+        <option value="BMW">
+        <option value="Jeep">
+        <option value="Outros">
+      </datalist>
+
+    <!-- XXXXXXXXXXXXXXXXXXXX EXEMPLO XXXXXXXXXXXXXXXXXXXXXX -->
+    <br><hr>
+
+    	<form>
+		<fieldset name="userinfo">
+			<legend style="font-family: 'Pacifico', cursive;">Cadastro:</legend>
+			<label for="Name">Nome:</label>
+			<input type="text" name="Name" size="60"> <br>
+			<label for="Email">Email:</label>
+			<input type="email" name="email" placeholder="e-mail"> <br>
+			<label for="pass">Senha até 8 dígitos:</label>
+			<input type="password" maxlength="8" name="pass"> <br>
+			<label for="cpf">CPF:</label>
+			<input type="file" name="cpf" multiple> <br>
+			<label for="city">Cidade:</label>
+			<input list="citys" name="citys">
+				<datalist id="citys">
+					<option value="Rio de Janeiro">
+					<option value="São Paulo">
+				</datalist>
+		</fieldset>
+		
+		<fieldset>
+		<legend style="font-family: 'Pacifico', cursive;">Em cartaz:</legend>
+			<label for="movies">Filmes:</label> <br>
+			<input type="radio" name="movies" value="one"> PALERMA, O MONSTRO DO LAGO DE ALAGOA GRANDE<br>
+			<input type="radio" name="movies" value="two"> THE BOOK IS ON THE TABLE <br>
+			<input type="radio" name="movies" value="three"> O HOMEM QUE CHEIRAVA VICK VAPORUB  <br>
+			<input type="radio" name="movies" value="four"> BEBEDOR DE SORO, O QUE A FOME FAZ COM O SER HUMANO<br><br>
+			<label for="data">Data:</label><br>
+			<input type="date" name="data"> <br><br>
+			<label for="shop">Escolha o local:</label><br>
+			<select name="shop">
+				<option value="ilha">Ilha Plaza Shopping</option>
+				<option value="barra">Barra Shopping</option>
+			</select>
+		</fieldset>
+		
+		<fieldset>
+		<legend style="font-family: 'Pacifico', cursive;">Feedback:</legend>
+			<label for="opiniao">De quais filmes você gostou?</label><br>
+			<input type="checkbox" name="opiniao" value="one" checked>PALERMA, O MONSTRO DO LAGO DE ALAGOA GRANDE<br>
+			<input type="checkbox" name="opiniao" value="two">THE BOOK IS ON THE TABLE  <br>
+			<input type="checkbox" name="opiniao" value="three">O HOMEM QUE CHEIRAVA VICK VAPORUB<br>
+			<input type="checkbox" name="opiniao" value="four">BEBEDOR DE SORO, O QUE A FOME FAZ COM O SER HUMANO<br>
+			<input type="checkbox" name="opiniao" value="outros" disabled>Outros<br><br>
+			
+			<label for="film">Qual filme dos em cartaz é seu preferido?</label><br>
+			<select>
+				<optgroup label="Romance">
+					<option value="soro">BEBEDOR DE SORO, O QUE A FOME FAZ COM O SER HUMANO</option>
+					<option value="vick">O HOMEM QUE CHEIRAVA VICK VAPORUB</option>
+				</optgroup>
+				<optgroup label="Aventura">
+					<option value="book">THE BOOK IS ON THE TABLE </option>
+					<option value="monstro">PALERMA, O MONSTRO DO LAGO DE ALAGOA GRANDE</option>
+				</optgroup>
+			</select>
+			
+			<br><br>
+			<label for="op">Qual nota você dá para o atendimento recebido? (de 5 a 10)</label><br>
+			<input type="number" name="quantity" min="5" max="10"><br><br>
+			<textarea rows="5" cols="25">Comentários ou Sugestões</textarea>
+		</fieldset>
+		<button type="reset" value="reset">RESETAR</button><br><br>
+		<button type="submit" value="submit">ENVIAR</button>
+	</form>
+  </body>
+
+</html>

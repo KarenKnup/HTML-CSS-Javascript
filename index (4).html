@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+  • <video></video> - Elemento que exibe vídeos ou filmes. 
+    Atributos: 
+      ☀ autoplay = "autoplay" ou "" (string vazia) ou sem atributo. Todas vez que a página for recarregada, o vídeo se iniciará. 
+      ☀ controls = "controls" ou "" (string vazia) ou sem atributo. Será exibido a interface de controle de vídeo. 
+      ☀ loop = "loop" ou "" (string vazia) ou sem atributo. O vídeo será passado continuamente. 
+      ☀ poster = Endereço de uma imagem será exibida enquanto o vídeo não carrega. 
+      ☀ height = Altura do vídeo em pixels 
+      ☀ width = Largura do vídeo em pixels 
+      ☀ muted = "muted" or ""ou "" (string vazia) ou sem atributo. Estado do vídeo default com o áudio desligado. 
+      ☀ src = URL do vídeo 
+
+
+  • <audio></audio> - Elemento que permite tocar um arquivo de áudio. 
+    Atributos: 
+      ☀ autoplay - Todas vez que a página for recarregada, o áudio se iniciará. 
+      ☀ controls - Será exibido a interface de controle de áudio. 
+      ☀ loop - O áudio será reproduzido continuamente. 
+      ☀ muted – Define que o áudio não deve ser reproduzido automaticamente. 
+      ☀ preload – Apresenta os valores: “auto”, “metadata” e “none”. Especifica se e como áudio deve ser reproduzido quando a página é carregada. 
+      ☀ src - URL do áudio. 
+  
+-->
+<html>
+
+  <head>
+   
+  </head>
+
+  <body>
+    <h7>VÍDEO</h7> <br>
+   <video width="320" height="240" controls src="http://media.w3.org/2010/05/bunny/movie.ogv"> Seu navegador não suporta vídeos em HTML 5 </video> <br>
+
+    <br><h7>VÍDEO do YOUTUBE</h7> <br>
+    <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe><br>
+
+    <br><h7>VÍDEO do YOUTUBE - Autoplay + Muted</h7> <br>
+     <iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1">
+</iframe> <br>
+
+    <br><h7>VÍDEO do YOUTUBE - Loop</h7> <br>
+    <iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1">
+</iframe><br>
+
+    <br><h7>VÍDEO do YOUTUBE - Controls</h7> <br>
+    <iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
+</iframe>
+
+    <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+    <br><hr>
+
+    <h7>ÁUDIO</h7><br>
+    <audio controls src="http://media.w3.org/2010/07/bunny/04-Death_Becomes_Fur.oga"> Seu navegador não suporta áudio em HTML 5 </audio>
+    
+  </body>
+
+</html>

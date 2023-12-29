@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>CANVAS - cria formas</title>
+  <style>
+    #myCanvas{
+      border: 1px #000 solid;
+      background: #f4f4f4;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="myCanvas" width="300" height="300"></canvas> <!-- Quadrado -->
+  <!-- Retângulo dentro do quadrado acima-->
+  <script>
+    var c = document.getElementById('myCanvas');
+    var ctx = c.getContext('2d');
+
+    //Retângulo
+    ctx.fillStyle='red';
+    ctx.fillRect(75,75,150,150);
+    //ctx.fillRect(20,75,150,150);
+    //ctx.fillRect(75,20 ,150,150);
+    //ctx.fillRect(75,75,250,150);
+    //ctx.fillRect(75,75,250,250);
+
+    //Linha
+    ctx.moveTo(0,0);
+    ctx.lineTo(250,100);
+    ctx.stroke();
+
+    //Círculo
+    ctx.beginPath();
+    ctx.arc(150,150,60,0,2*Math.PI);
+    ctx.fillStyle='green';
+    ctx.fill(); 
+    ctx.lineWidth=4;
+    ctx.strokeStyle='red';
+    ctx.stroke();
+
+    //Texto
+    ctx.font='50px Arial';
+    ctx.strokeStyle='red';
+    ctx.strokeText('Hello World',20,150);
+
+    //Gradiente
+     var grd=ctx.createLinearGradient(0,0,100,0);
+    grd.addColorStop(0,'blue');
+    grd.addColorStop(1,'white');
+    ctx.fillStyle=grd;
+    ctx.fillRect(10,10,150,150); 
+
+  </script>
+
+</body>
+
+</html>

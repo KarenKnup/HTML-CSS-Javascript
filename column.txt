@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Columns</title>
+  <style>
+    article{
+      column-count: 3; //parte o article em 3 colunas
+      column-gap: 40px; //espaço entre as colunas
+      /*column-rule-style: solid;
+      column-rule-width: 1px;
+      column-rule-color: coral;*/
+      column-rule: 1px solid coral;
+    }
+
+    article h1{
+      column-span:all; //Faz o h1 ficar acima de todas as colunas
+    }
+
+    /*---------------------*/
+    .textbox1{
+      border: 2px solid;
+      padding: 20px;
+      width: 300px;
+      overflow:auto;
+      resize: horizontal; //agora o usuario pode aumentar a caixa horizontalmente
+      /*resize: vertical;
+      resize: both;*/
+    }
+    /*---------------------*/
+
+    .textbox2{
+      margin: 20px;
+      padding:10px;
+      width:300px;
+      height:100px;
+      border: 1px solid black;
+      outline: 1px solid red;
+      outline-offset: 10px;
+    }
+
+    /*---------------------*/
+    .flex-container{
+      display: flex; //faz os itens ficarem um do lado do outro, e não um abaixo do outro
+      flex-direction: row-reverse;
+      /* flex-direction: column;
+        flex-direction: column-reverse;
+      */
+      justify-content: center; //centraliza os itens
+      /*justify-content: space-between;
+      justify-content: space-around;*/
+      width: 400px;
+      height:250px;
+      background-color: #000000;
+    }
+
+    .flex-item{
+      background-color:lightblue;
+      width:100px;
+      height:100px;
+      margin:10px;
+    }
+
+    .first{
+      order: -1;
+    }
+  </style>
+</head>
+
+<body>
+  <article>
+    <h1>Article title</h1>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et risus id tellus euismod feugiat. Nullam et elementum urna. Donec laoreet, mauris in varius commodo, odio arcu commodo sapien, nec tincidunt mi est id turpis. Donec odio quam, placerat sed lacus non, volutpat condimentum nulla. Sed quis tristique ligula. Morbi ultricies dui iaculis dignissim iaculis. Vivamus vestibulum malesuada fermentum. Nulla facilisi. Mauris purus nibh, eleifend eu velit ut, mattis eleifend libero. Praesent imperdiet, nulla nec ullamcorper porta, quam purus hendrerit lorem, ut rutrum nunc ex id velit. Suspendisse mi mauris, consectetur eget mi sed, gravida semper erat. Sed posuere quis sem ut pretium.
+  </article>
+
+  <br>
+
+  <div class="textbox1">Try ans resize this element</div>
+  <div class="textbox2">This element has 10px outline</div>
+
+  <div class="flex-container">
+    <div class="flex-item">flex item 1</div>
+    <div class="flex-item first">flex item 2</div>
+    <div class="flex-item">flex item 3</div>
+  </div>
+</body>
+
+</html>

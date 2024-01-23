@@ -35,6 +35,7 @@ main (20) | Carrossel <br>
 main (21) | Flexbox <br>
 Drop down | Drop down simples <br>
 column.txt | Colunas <br>
+transition.txt | Transições <br>
 
 <br><br>
 <div align="center">

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Web Storage</title>
+</head>
+
+<body>
+  <div id="name"></div>
+  <script>
+   /* if(typeof(Storage) !== "undefined"){
+        //Armazenar um item
+      localStorage.setItem('name', 'John');
+
+      //Remover um item
+      //localStorage.removeItem('name');
+
+      //Pega item
+      console.log(localStorage.getItem('name')); //aparece no console
+  //console.log(localStorage.name);  
+
+      if(localStorage.name){
+        //Exibir item no html
+        document.getElementById('name').innerHTML=localStorage.getItem('name');//aparece na div acima, no html
+      } else {
+        document.getElementById('name').innerHTML="No Name Found";
+      }
+    } else {
+      console.log('localStorage Not Available');
+    }*/
+
+    if(typeof(Storage) !== "undefined"){
+          //Armazenar um item
+        sessionStorage.setItem('name', 'John');
+
+        //Remover um item
+        //sessionStorage.removeItem('name');
+
+        //Pega item
+        console.log(sessionStorage.getItem('name')); //aparece no console
+    //console.log(sessionStorage.name);  
+
+        if(sessionStorage.name){
+          //Exibir item no html
+          document.getElementById('name').innerHTML=sessionStorage.getItem('name');//aparece na div acima, no html
+        } else {
+          document.getElementById('name').innerHTML="No Name Found";
+        }
+      } else {
+        console.log('sessionStorage Not Available');
+      }
+
+
+  </script>
+</body>
+
+</html>

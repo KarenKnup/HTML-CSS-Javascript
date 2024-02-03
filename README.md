@@ -11,6 +11,7 @@ main (4) | Vídeo e Áudio <br>
 main (5) | Formulários <br>
 svg.txt | SVG <br>
 Grid system | Grid em Bootstrap <br>
+Bootstrap | Tipos de colunas, como baixar Bootstrap e usar JQuery<br>
 
 <br><br>
 <div align="center">

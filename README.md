@@ -12,6 +12,7 @@ main (5) | Formulários <br>
 svg.txt | SVG <br>
 Grid system | Grid em Bootstrap <br>
 Bootstrap | Tipos de colunas, como baixar Bootstrap e usar JQuery<br>
+typography, forms and tables | Tipografia, formulários e tabelas <br> 
 
 <br><br>
 <div align="center">

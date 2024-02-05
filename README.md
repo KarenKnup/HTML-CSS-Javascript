@@ -39,6 +39,7 @@ main (21) | Flexbox <br>
 Drop down | Drop down simples <br>
 column.txt | Colunas <br>
 transition.txt | Transições <br>
+css components | CSS dos componentes usando Bootstrap <br>
 
 <br><br>
 <div align="center">

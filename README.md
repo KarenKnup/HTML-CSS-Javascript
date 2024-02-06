@@ -13,6 +13,7 @@ svg.txt | SVG <br>
 Grid system | Grid em Bootstrap <br>
 Bootstrap | Tipos de colunas, como baixar Bootstrap e usar JQuery<br>
 typography, forms and tables | Tipografia, formulários e tabelas <br> 
+carousel, collapse and accordion.txt | Carrossel, colapso e accordion em Bootstrap<br>
 
 <br><br>
 <div align="center">

@@ -69,3 +69,4 @@ MyNote Project | Preenche e salva uma nota localmente em uma página <br>
 canvas.txt | Canvas <br>
 drag and drop.txt | Arrastar e soltar <br>
 web storage.txt | Web Storage <br>
+Javascript Plugins | Bootstrap - Plugins do Javascript <br>

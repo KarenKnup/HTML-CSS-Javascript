@@ -41,6 +41,7 @@ Drop down | Drop down simples <br>
 column.txt | Colunas <br>
 transition.txt | Transições <br>
 css components | CSS dos componentes usando Bootstrap <br>
+filtros.html | Filtros para imagens usando CSS<br>
 
 <br><br>
 <div align="center">
